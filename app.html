@@ -1,0 +1,318 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+	<head title="Raid Manager"  >
+		<title>Raid Manager</title>
+		<link  href="./images/icons/raidmanager.ico" rel="icon" type="image/x-icon" >
+		<link  href="./images/icons/raidmanager.ico" rel="shortcut icon" type="image/x-icon" >
+		<Meta content="text/html; charset=iso-8859-1" charset="utf-8" http-equiv="Content-Type" >
+		<Meta name="viewport" content="user-scalable=no, minimal-ui, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" >
+		<Meta name="mobile-web-app-capable" content="yes" >
+		<Meta name="apple-mobile-web-app-capable" content="yes" >
+		<Meta content="no-cache" http-equiv="cache-controll" >
+		<Meta http-equiv="expires" >
+		<Meta content="no-cache" http-equiv="pragma" >
+		<Meta name="apple-mobile-web-app-capable" content="yes" >
+		<Meta name="keywords" content="" >
+		<Meta name="description" content="Life is horror" >
+		<Meta name="classification" content="App,Webapp" >
+		<Meta name="language" content="en" >
+		<Meta name="author" content="Emanuel Hediger" >
+		<Meta name="creator" content="Leechlabs.org" >
+		<Meta name="creator" content="(SCHEME=EMAIL)emanuel@leechlabs.org" >
+		<Meta name="creator" content="(SCHEME=URL)http://www.leechlabs.org" >
+		<Meta name="identifier" content="(SCHEME=URI)http://www.leechlabs.org" >
+		<Meta name="rights" content="Copyright (c) 2023 Leechlabs.org" >
+		<link rel="manifest" href="raidmanager.webmanifest" />
+		<script type="text/javascript" charset="utf-8" >		
+			var turdjs = window.turdjs ={};
+			turdjs.allowCaching=true;
+			turdjs.distribution="test";
+			turdjs.version="1.0.3";			
+			turdjs.isLocalHost = function() {
+				return location.hostname.includes("192")||location.hostname.includes("127.0.0.1")||location.hostname.includes("localhost");
+			};
+			if (window.location.href.includes("www.") || (location.protocol !== "https:" && !turdjs.isLocalHost()))
+				location.replace(window.location.href.replace("www.", "").replace("http:", "https:"));		
+			turdjs.host =  "https://turdjs.leechlabs.org/";
+			if (turdjs.isLocalHost()){			
+				turdjs.host = location.protocol+"//"+location.hostname+"/turdjs/";
+			}
+			turdjs.turdHome = turdjs.host+turdjs.distribution+"/"+turdjs.version+"/";
+			turdjs.webroot = window.location.href.split("#")[0].replace("index.php", "").replace("index.html","").replace("index.htm","");
+			console.log("turdSource: \""+turdjs.turdHome+"\"");
+			if(!turdjs.allowCaching) {
+				var script = document.createElement('script');
+				script.type = 'text/javascript';
+				script.src = turdjs.turdHome + "turd.js?rand="+Math.random();
+				script.onload = function() {
+					console.log("loaded turdjs");
+					turdjs.loadScripts("./scripts/js/script_list.js", turdjs.finish);
+				};
+				document.getElementsByTagName('HEAD')[0].appendChild(script);
+			 }
+		</script>
+		<style>.replaceMinified</style>
+		<script type="text/javascript" charset="utf-8" >var replaceMinified;</script>
+	</head>
+	<body>	
+				
+		<div id="siteContent" style = ""> 
+			<div id = "menu" class = "menu menuClosed">
+				<div id ="openMenuButtonDiv" class = "openMenuButtonDiv">
+					<button id = "openMenuButton" class = "btn btn-default menuStateButton">
+						<span id = "menuButtonGlyph" class="menuButtonGlyph glyphicon glyphicon-chevron-left "></span>
+					</button>
+				</div>
+				<div id = "menuContent" class = "menuContent">
+					<div id = "indexView" class = "indexView">
+					</div>
+				</div>
+			</div>			
+			<div id = "scrollBody" class = "scrollBody">
+				<div id = "contentView" class = "contentView">
+					<div>
+						<p>This is not finished, it is a rush job to spare me from having to use excel and it might be improved later. Because the seagate website had a bug and no comparison of pricing...</p>
+						<div class = "hddListing">
+							<p>Available Harddrives</p>
+							<div class = "scrollList">
+							<table id = "hddTable">
+									<thead>
+										<tr>
+											<th><div class= "contentCell">Size TB</div></th>
+											<th><div class= "contentCell">Price</div></th>
+											<th><div class= "contentCell">Brand</div></th>
+											<th><div class= "contentCell">Article</div></th>
+											<th><div class= "contentCell">Add</div></th>
+										</tr>
+									</thead>
+									<tbody>
+									
+										<tr>
+											<td><div class= "contentCell">1</div></td>
+											<td><div class= "contentCell">51</div></td>
+											<td><div class= "contentCell">WD</div></td>
+											<td><div class= "contentCell">5596304</div></td>
+											<td style = "width: 20px;"><div class= "contentCell" style = "font-weight: bold;">+</div></td>
+										</tr>
+									
+										<tr>
+											<td><div class= "contentCell">2</div></td>
+											<td><div class= "contentCell">62</div></td>
+											<td><div class= "contentCell">Seagate</div></td>
+											<td><div class= "contentCell">9302108</div></td>
+											<td style = "width: 20px;"><div class= "contentCell" style = "font-weight: bold;">+</div></td>
+										</tr>
+										
+										<tr>
+											<td><div class= "contentCell">2</div></td>
+											<td><div class= "contentCell">66</div></td>
+											<td><div class= "contentCell">WD</div></td>
+											<td><div class= "contentCell">14774391</div></td>
+											<td style = "width: 20px;"><div class= "contentCell" style = "font-weight: bold;">+</div></td>
+										</tr>
+																				
+										<tr>
+											<td><div class= "contentCell">3</div></td>
+											<td><div class= "contentCell">82</div></td>
+											<td><div class= "contentCell">Seagate</div></td>
+											<td><div class= "contentCell">9115250</div></td>
+											<td style = "width: 20px;"><div class= "contentCell" style = "font-weight: bold;">+</div></td>
+										</tr>
+																			
+										<tr>
+											<td><div class= "contentCell">4</div></td>
+											<td><div class= "contentCell">82</div></td>
+											<td><div class= "contentCell">Toshiba</div></td>
+											<td><div class= "contentCell">16310157</div></td>
+											<td style = "width: 20px;"><div class= "contentCell" style = "font-weight: bold;">+</div></td>
+										</tr>
+										<tr>
+											<td><div class= "contentCell">4</div></td>
+											<td><div class= "contentCell">82</div></td>
+											<td><div class= "contentCell">Toshiba</div></td>
+											<td><div class= "contentCell">12546010</div></td>
+											<td style = "width: 20px;"><div class= "contentCell" style = "font-weight: bold;">+</div></td>
+										</tr>
+										<tr>
+											<td><div class= "contentCell">4</div></td>
+											<td><div class= "contentCell">86</div></td>
+											<td><div class= "contentCell">Seagate</div></td>
+											<td><div class= "contentCell">20922676</div></td>
+											<td style = "width: 20px;"><div class= "contentCell" style = "font-weight: bold;">+</div></td>
+										</tr>
+										
+										<tr>
+											<td><div class= "contentCell">6</div></td>
+											<td><div class= "contentCell">133</div></td>
+											<td><div class= "contentCell">Toshiba</div></td>
+											<td><div class= "contentCell">15862152</div></td>
+											<td style = "width: 20px;"><div class= "contentCell" style = "font-weight: bold;">+</div></td>
+										</tr>
+										
+										<tr>
+											<td><div class= "contentCell">8</div></td>
+											<td><div class= "contentCell">146</div></td>
+											<td><div class= "contentCell">Seagate</div></td>
+											<td><div class= "contentCell">10376097</div></td>
+											<td style = "width: 20px;"><div class= "contentCell" style = "font-weight: bold;">+</div></td>
+										</tr>
+										
+										<tr>
+											<td><div class= "contentCell">10</div></td>
+											<td><div class= "contentCell">175</div></td>
+											<td><div class= "contentCell">Toshiba</div></td>
+											<td><div class= "contentCell">8922778</div></td>
+											<td style = "width: 20px;"><div class= "contentCell" style = "font-weight: bold;">+</div></td>
+										</tr>
+										
+										<tr>
+											<td><div class= "contentCell">12</div></td>
+											<td><div class= "contentCell">199</div></td>
+											<td><div class= "contentCell">Toshiba</div></td>
+											<td><div class= "contentCell">8783334</div></td>
+											<td style = "width: 20px;"><div class= "contentCell" style = "font-weight: bold;">+</div></td>
+										</tr>
+										
+										<tr>
+											<td><div class= "contentCell">14</div></td>
+											<td><div class= "contentCell">235</div></td>
+											<td><div class= "contentCell">Seagate</div></td>
+											<td><div class= "contentCell">16410315</div></td>
+											<td style = "width: 20px;"><div class= "contentCell" style = "font-weight: bold;">+</div></td>
+										</tr>
+										
+										<tr>
+											<td><div class= "contentCell">14</div></td>
+											<td><div class= "contentCell">239</div></td>
+											<td><div class= "contentCell">Toshiba</div></td>
+											<td><div class= "contentCell">8783335</div></td>
+											<td style = "width: 20px;"><div class= "contentCell" style = "font-weight: bold;">+</div></td>
+										</tr>
+										
+										<tr>
+											<td><div class= "contentCell">16</div></td>
+											<td><div class= "contentCell">246</div></td>
+											<td><div class= "contentCell">Seagate</div></td>
+											<td><div class= "contentCell">15299230</div></td>
+											<td style = "width: 20px;"><div class= "contentCell" style = "font-weight: bold;">+</div></td>
+										</tr>
+										
+										<tr>
+											<td><div class= "contentCell">16</div></td>
+											<td><div class= "contentCell">249</div></td>
+											<td><div class= "contentCell">Toshiba</div></td>
+											<td><div class= "contentCell">12929416</div></td>
+											<td style = "width: 20px;"><div class= "contentCell" style = "font-weight: bold;">+</div></td>
+										</tr>
+										
+										<tr>
+											<td><div class= "contentCell">18</div></td>
+											<td><div class= "contentCell">282</div></td>
+											<td><div class= "contentCell">Seagate</div></td>
+											<td><div class= "contentCell">17828191</div></td>
+											<td style = "width: 20px;"><div class= "contentCell" style = "font-weight: bold;">+</div></td>
+										</tr>
+																				
+										<tr>
+											<td><div class= "contentCell">20</div></td>
+											<td><div class= "contentCell">317</div></td>
+											<td><div class= "contentCell">Seagate</div></td>
+											<td><div class= "contentCell">17795518</div></td>
+											<td style = "width: 20px;"><div class= "contentCell" style = "font-weight: bold;">+</div></td>
+										</tr>
+										
+										<tr>
+											<td><div class= "contentCell">20</div></td>
+											<td><div class= "contentCell">299</div></td>
+											<td><div class= "contentCell">Toshiba</div></td>
+											<td><div class= "contentCell">23132349</div></td>
+											<td style = "width: 20px;"><div class= "contentCell" style = "font-weight: bold;">+</div></td>
+										</tr>
+																			
+										<tr>
+											<td><div class= "contentCell">22</div></td>
+											<td><div class= "contentCell">395</div></td>
+											<td><div class= "contentCell">WD</div></td>
+											<td><div class= "contentCell">23346912</div></td>
+											<td style = "width: 20px;"><div class= "contentCell" style = "font-weight: bold;">+</div></td>
+										</tr>
+										
+										<tr>
+											<td><div class= "contentCell">22</div></td>
+											<td><div class= "contentCell">405</div></td>
+											<td><div class= "contentCell">Seagate</div></td>
+											<td><div class= "contentCell">25285222</div></td>
+											<td style = "width: 20px;"><div class= "contentCell" style = "font-weight: bold;">+</div></td>
+										</tr>
+										
+										<tr>
+											<td><div class= "contentCell">22</div></td>
+											<td><div class= "contentCell">455</div></td>
+											<td><div class= "contentCell">Seagate</div></td>
+											<td><div class= "contentCell">35977315</div></td>
+											<td style = "width: 20px;"><div class= "contentCell" style = "font-weight: bold;">+</div></td>
+										</tr>
+										<!--
+										<tr>
+											<td><div class= "contentCell"></div></td>
+											<td><div class= "contentCell"></div></td>
+											<td><div class= "contentCell"></div></td>
+											<td><div class= "contentCell"></div></td>
+											<td style = "width: 20px;"><div class= "contentCell" style = "font-weight: bold;">+</div></td>
+										</tr>
+										-->
+										
+										<!--																				
+										<tr>
+											<td><div class= "contentCell">14</div></td>
+											<td><div class= "contentCell">255</div></td>
+											<td><div class= "contentCell">WD</div></td>
+											<td><div class= "contentCell">Lalala</div></td>
+											<td style = "width: 20px;"><div class= "contentCell" style = "font-weight: bold;">+</div></td>
+										</tr>
+										-->
+									</tbody>
+								</table>
+								</div>
+						</div>
+						<div class = "hddListing">
+							<div class = "titleField">
+							<p class = "titleText">Raid Configuration
+								
+							</p>
+							<div class = "typeSelect" onchange= "calculateRaid();">
+							<select name="configurations" id="configurations">
+							<option value="type_0">0</option>
+							<option value="type_1" default>1</option>
+							<option value="type_5">5</option>
+							<!--<option value="type_50">50</option>-->
+							</select>
+							</div>
+							</div>
+							<div class = "scrollList">
+								<table id = "raidTable">
+									<thead>
+										<tr>
+											<th><div class= "contentCell">Size TB</div></th>
+											<th><div class= "contentCell">Price</div></th>
+											<th><div class= "contentCell">Brand</div></th>
+											<th><div class= "contentCell">Article</div></th>
+											<th><div class= "contentCell">Remove</div></th>
+										</tr>
+									</thead>										
+									<tbody>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div style = "position:relative;">
+							<div id = "resultField"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+	
+		</div>
+		
+	</body>
+</html>

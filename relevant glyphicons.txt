@@ -1,0 +1,13 @@
+glyphicon glyphicon-plus
+glyphicon glyphicon-pencil
+glyphicon glyphicon-edit
+glyphicon glyphicon-ok
+glyphicon glyphicon-remove
+glyphicon glyphicon-trash
+glyphicon glyphicon-list-alt
+glyphicon glyphicon-circle-arrow-up
+glyphicon glyphicon-circle-arrow-down
+glyphicon glyphicon-tasks
+glyphicon glyphicon-pushpin
+glyphicon glyphicon-log-in
+glyphicon glyphicon-log-out
